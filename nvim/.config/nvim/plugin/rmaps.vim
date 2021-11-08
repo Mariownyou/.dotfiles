@@ -17,3 +17,16 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 nnoremap <S-LEFT> :bp<CR>
 nnoremap <S-RIGHT> :bN<CR>
 nnoremap <S-DOWN> :bd<CR>
+
+" автокомплит через <Ctrl+Space>
+inoremap <C-@> <C-x><C-o>   
+if has("gui_running")
+    inoremap <C-space> <C-x><C-o>
+endif
+
+" Esc in terminal mode
+tnoremap <Esc> <C-\><C-n>
+
+" Move block left and right
+vnoremap <A-l> d2lp
+vnoremap <A-h> d2hp 

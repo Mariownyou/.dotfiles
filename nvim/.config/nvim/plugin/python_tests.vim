@@ -74,4 +74,35 @@ function! RunTest()
    :call feedkeys(enter)
 endfunction
 
+
+func! RunFile()
+    let path = expand('%')
+    :call OpenTerminal()
+    :call feedkeys('python3 '. path)
+    :call feedkeys("\<CR>")
+endfunc
+
+
+" func! RunServer()
+"     :call OpenTerminal()
+"     :call execute('tmux new -w server')
+"     :call feedkeys('python3 '. path)
+"     :call feedkeys("\<CR>")
+" endfunc
+
+
+func! Migrate()
+    :! pipenv run ./manage.py migrate
+endfunc
+
+
+func! Migrations()
+    :! pipenv run ./manage.py makemigraions
+    :call Migrate()
+endfunc
+
+
+autocmd FileType python noremap <leader>rf :call RunFile()<CR>
 autocmd FileType python noremap <leader>rt :call RunTest()<CR>
+autocmd FileType python noremap <leader>rm :call Migrate()<CR>
+autocmd FileType python noremap <leader>rM :call Migrations()<CR>
