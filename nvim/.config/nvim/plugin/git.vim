@@ -1,10 +1,8 @@
-func! GetBranchName()
-    let command = 'git rev-parse --abbrev-ref HEAD'
-    let name = execute(':!' . command)
-    :echo name
-endfunc
+nmap <leader>gs :G<cr>
+nmap <leader>gc :Git commit<cr>
+nmap <leader>gp :Git! push<cr>
 
+" lua << EOF
+"     require('gitsigns').setup()
+" EOF
 
-func! Commmit()
-
-endfunc

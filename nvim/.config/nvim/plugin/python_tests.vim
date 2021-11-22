@@ -97,7 +97,7 @@ endfunc
 
 
 func! Migrations()
-    :! pipenv run ./manage.py makemigraions
+    :! pipenv run ./manage.py makemigrations 
     :call Migrate()
 endfunc
 
@@ -105,4 +105,4 @@ endfunc
 autocmd FileType python noremap <leader>rf :call RunFile()<CR>
 autocmd FileType python noremap <leader>rt :call RunTest()<CR>
 autocmd FileType python noremap <leader>rm :call Migrate()<CR>
-autocmd FileType python noremap <leader>rM :call Migrations()<CR>
+autocmd FileType python noremap <leader>rmm :call Migrations()<CR>

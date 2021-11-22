@@ -1,22 +1,24 @@
 " Colorschemes
+set background=dark
+" let g:solarized_termcolors=256
+syntax enable
+set t_Co=256
 
 " for vim 8
 if (has("termguicolors"))
     set termguicolors
 endif
-
-set guifont=Monaco:h14
 " colorscheme OceanicNext
+
 if has('gui_running')
-    let g:solarized_termcolors=256
-    set t_Co=256
-    syntax enable
-    set background=dark
     colorscheme solarized
 else
-  colorscheme gruvbox
+    colorscheme gruvbox
 endif
 
+" set macligatures
+set guifont=Fira\ Code:h12
+highlight Normal guibg=none
 
 " Change highlighting of cursor line when entering/leaving Insert Mode
 set cursorline

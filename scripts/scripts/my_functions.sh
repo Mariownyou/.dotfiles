@@ -4,12 +4,12 @@ git config --global core.excludesFile '~/.gitignore'
 
 function work() {
     SESSIONNAME="work"
+    cd /mnt/c/dev/work
     tmux has-session -t $SESSIONNAME &> /dev/null
 
     if [ $? != 0 ] 
     then
         tmux new-session -s $SESSIONNAME -n script -d
-        tmux send-keys -t $SESSIONNAME "cd /mnt/c/dev/work" C-m 
         tmux send-keys -t $SESSIONNAME "clear" C-m 
     fi
 
@@ -18,12 +18,12 @@ function work() {
 
 function portal() {
     SESSIONNAME="portal"
+    cd /mnt/c/dev/work/jackrabbit3
     tmux has-session -t $SESSIONNAME &> /dev/null
 
     if [ $? != 0 ] 
     then
         tmux new-session -s $SESSIONNAME -n script -d
-        tmux send-keys -t $SESSIONNAME "cd /mnt/c/dev/work/jackrabbit3" C-m 
         tmux send-keys -t $SESSIONNAME "clear" C-m 
     fi
 
@@ -32,12 +32,12 @@ function portal() {
 
 function shipping() {
     SESSIONNAME="shipping"
+    cd /mnt/c/dev/work/Shipping
     tmux has-session -t $SESSIONNAME &> /dev/null
 
     if [ $? != 0 ] 
     then
         tmux new-session -s $SESSIONNAME -n script -d
-        tmux send-keys -t $SESSIONNAME "cd /mnt/c/dev/work/Shipping" C-m 
         tmux send-keys -t $SESSIONNAME "clear" C-m 
     fi
 
@@ -54,12 +54,12 @@ function blocker() {
 
 function vinit() {
     SESSIONNAME="vinit"
+    cd ~/.dotfiles/nvim/.config/nvim
     tmux has-session -t $SESSIONNAME &> /dev/null
 
     if [ $? != 0 ] 
     then
         tmux new-session -s $SESSIONNAME -n script -d
-        tmux send-keys -t $SESSIONNAME "cd ~/.config/nvim" C-m 
         tmux send-keys -t $SESSIONNAME "clear" C-m 
     fi
 

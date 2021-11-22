@@ -1,6 +1,8 @@
-" enable gtags module
-let g:gutentags_modules = ['ctags']
+" Reset default mappings
+let g:gutentags_plus_nomap = 1
 
+" enable gtags module
+let g:gutentags_modules = ['ctags', 'gtags_cscope']
 " config project root markers.
 let g:gutentags_project_root = ['.root']
 

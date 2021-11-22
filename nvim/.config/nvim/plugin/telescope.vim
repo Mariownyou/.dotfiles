@@ -5,8 +5,9 @@ require('telescope').setup{
 EOF
 
 nnoremap <Leader>FF :lua require'telescope.builtin'.file_browser{ find_command = {'rg', '--files', '--hidden', '-g'} }<CR>
+nnoremap <leader>gf :lua require'telescope.builtin'.git_files()<cr>
+nnoremap <leader>gb :lua require'telescope.builtin'.git_branches()<cr>
 
-nnoremap <Leader>ft :lua require('telescope').extensions.git_worktree.git_worktrees()<cr>
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
