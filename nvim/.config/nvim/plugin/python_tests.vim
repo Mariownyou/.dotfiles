@@ -40,13 +40,7 @@ func! GetLocation()
 endfunc
 
 func! GetRelativePath()
-    let path = expand("%")
-    if l:path[0] == '/'
-        let l:path = path[1:] 
-    endif
-    if l:path[1] == '/'
-        let l:path = path[2:]
-    endif
+    let path = fnamemodify(expand("%"), ":~:.")
     let l:path = path[:-3]
     let l:path = substitute(l:path, '/', '.', "g")
     :echo l:path

@@ -30,3 +30,24 @@ tnoremap <Esc> <C-\><C-n>
 " Move block left and right
 vnoremap <A-l> d2lp
 vnoremap <A-h> d2hp 
+
+" greatest remap ever
+xnoremap <leader>p "_dP
+
+" next greatest remap ever : asbjornHaland
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+
+
+" Esc in insert mode 
+inoremap <C-c> <esc>
+
+nnoremap <C-k> :cnext<CR>zz
+nnoremap <C-j> :cprev<CR>zz
+
+" :W ro exit vim
+com! W w
+
+nnoremap ^ <C-^>

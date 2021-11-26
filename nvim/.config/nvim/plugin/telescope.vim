@@ -1,6 +1,12 @@
 lua << EOF
 require('telescope').setup{
-    file_ignore_patterns = {"node_modules", "tags.temp", "tags.lock", "tags"}
+    file_ignore_patterns = {"node_modules", "tags.temp", "tags.lock", "tags"},
+    extensions = {
+        fzy_native = {
+            override_generic_sorter = false,
+            override_file_sorter = true,
+        },
+    },
 }
 EOF
 
