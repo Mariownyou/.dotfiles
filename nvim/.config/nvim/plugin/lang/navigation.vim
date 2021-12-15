@@ -1,4 +1,4 @@
-nnoremap <C-d> :NERDTreeToggle<CR>
+nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 
@@ -11,3 +11,16 @@ nnoremap <A-2> :lua require("harpoon.ui").nav_file(2)<cr>
 nnoremap <A-3> :lua require("harpoon.ui").nav_file(3)<cr>
 nnoremap <A-4> :lua require("harpoon.ui").nav_file(4)<cr>
 nnoremap <A-5> :lua require("harpoon.ui").nav_file(5)<cr>
+
+
+" Harpoon settings
+lua << EOF
+require("harpoon").setup({
+    global_settings = {
+        save_on_toggle = true,
+        save_on_change = true,
+        enter_on_sendcmd = false,
+        excluded_filetypes = { "harpoon" }
+    },
+})
+EOF

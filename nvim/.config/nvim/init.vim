@@ -1,9 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
 " Navigation
-Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'Mariownyou/harpoon-git'
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 " Git
 " Plug 'tpope/vim-fugitive'
@@ -16,10 +17,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " Themes
-Plug 'mhartington/oceanic-next'
-Plug 'altercation/vim-colors-solarized'
-" Plug 'gruvbox-community/gruvbox'
-Plug 'morhetz/gruvbox'
+Plug 'lifepillar/gruvbox8'
 
 " Location
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -31,6 +29,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
+
 " " Imports
 " Plug 'mgedmin/python-imports.vim'
 " Plug 'skywind3000/gutentags_plus'
@@ -39,6 +38,7 @@ Plug 'L3MON4D3/LuaSnip'
 
 " Syntax
 Plug 'tpope/vim-commentary'
+Plug '9mm/vim-closer'
 
 " FRONTEND
 Plug 'mattn/emmet-vim'
