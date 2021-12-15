@@ -1,0 +1,5 @@
+[core]
+	excludesFile = ~/.gitignore
+[user]
+	email = smj510black@gmail.com
+	name = Leva
